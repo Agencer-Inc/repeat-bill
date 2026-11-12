@@ -7,8 +7,12 @@
   "domain": "fixture-orders",
   "run_id": "fixture-2026-10-14",
   "harness_commit": "0123456789abcdef0123456789abcdef01234567",
+  "started_at": "2026-10-14T00:00:00.000Z",
   "prices": {
-    "example-large": { "in_per_mtok": 3, "out_per_mtok": 15 }
+    "example-large": {
+      "in_per_mtok": 3,
+      "out_per_mtok": 15
+    }
   },
   "days": [
     {

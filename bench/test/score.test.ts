@@ -183,6 +183,7 @@ const CONTRACT = [
   'prices',
   'run_id',
   'small_model',
+  'started_at',
   'version',
 ]
 const DAY_CONTRACT = [
@@ -345,6 +346,32 @@ describe('the scorer', () => {
     expect(() =>
       scoreRuns([readRun(writeRun('plain', PLAIN_DAYS)), readRun(writeRun('reactor', PLAIN_DAYS, { prices: dearer }))]),
     ).toThrow(/costed at different prices for big-model/)
+  })
+
+  it('refuses two arms that did not start within a day of each other: a copied arm is not a run (2026-11-12)', () => {
+    // The Nov 5 runs paired a plain arm from Oct 27, its harness_commit rewritten to match. The start the harness
+    // wrote into run.json is the one field such a copy cannot share without a second edit, and results.json carries it.
+    expect(() =>
+      scoreRuns([
+        readRun(
+          writeRun('plain', PLAIN_DAYS, {
+            started_at: '2026-10-03T00:00:00.000Z',
+            finished_at: '2026-10-03T01:00:00.000Z',
+          }),
+        ),
+        readRun(writeRun('reactor', PLAIN_DAYS)),
+      ]),
+    ).toThrow(/started more than 24 hours apart/)
+    const later = scoreRuns([
+      readRun(writeRun('plain', PLAIN_DAYS)),
+      readRun(
+        writeRun('reactor', PLAIN_DAYS, {
+          started_at: '2026-10-14T23:00:00.000Z',
+          finished_at: '2026-10-15T00:30:00.000Z',
+        }),
+      ),
+    ])
+    expect(later.map((r) => r.started_at)).toEqual(['2026-10-14T00:00:00.000Z', '2026-10-14T23:00:00.000Z'])
   })
 
   it('refuses two arms run with different request timeouts', () => {

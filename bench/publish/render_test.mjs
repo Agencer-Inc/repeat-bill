@@ -315,6 +315,18 @@ test('runs group by domain and models, in sorted order, each chart with its own 
   assert.equal(new Set(ids).size, 3)
 })
 
+test('refuses arms that started more than 24 hours apart: an arm copied in from another run (2026-11-12)', () => {
+  const plain = { ...arm('plain'), started_at: '2026-10-03T00:00:00.000Z' }
+  assert.throws(
+    () =>
+      pairRuns([
+        { file: 'r/plain', result: plain },
+        { file: 'r/reactor', result: arm('reactor') },
+      ]),
+    /the arms started more than 24 hours apart/,
+  )
+})
+
 test('pairs the arms of a run by run_id and domain, as the scorer writes them: one run, two domains', () => {
   // The harness runs both desks under one run_id, and `node cli.ts score` pairs them by run_id and domain (2026-11-10).
   const runOf = (domain) => [

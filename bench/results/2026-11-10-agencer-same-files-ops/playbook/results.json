@@ -7,6 +7,7 @@
   "domain": "files-ops",
   "run_id": "2026-11-10-agencer-same",
   "harness_commit": "8ee89f335956b240a14d7ec5d4c51d48b098b456",
+  "started_at": "2026-11-10T11:26:08.295Z",
   "prices": {
     "claude-opus-5-5": {
       "in_per_mtok": 4,

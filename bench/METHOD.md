@@ -84,6 +84,7 @@ allows no other field.
 | `small_model` | The small model's id on the playbook arm; `null` on the plain arm, which has none. |
 | `domain` | The domain the tasks come from. The same on both arms. |
 | `run_id` | The run both arms belong to. No other run under `bench/results/` uses it. |
+| `started_at` | When the arm started. Both arms of a run start within 24 hours of each other; an arm copied in from another run is refused. |
 | `harness_commit` | The git commit of the harness that ran, 7 to 40 hex characters. |
 | `prices` | For each model id: `in_per_mtok` and `out_per_mtok`, US dollars per million tokens in and out. |
 | `days` | One entry per round, day 1 to day N, each once. Fields below. |

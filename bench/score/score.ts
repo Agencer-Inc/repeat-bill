@@ -60,6 +60,11 @@ export interface Results {
   domain: string
   run_id: string
   harness_commit: string
+  /**
+   * When the arm started, as the harness wrote it into run.json (2026-11-12). Both arms of a run start within a day of
+   * each other, or the scorer refuses the pair: an arm copied in from another run is not part of this one.
+   */
+  started_at: string
   prices: Record<string, { in_per_mtok: number; out_per_mtok: number }>
   days: DayResult[]
   /** On the playbook arm only: each task's step line, who filled each step and how its job ended. */
@@ -175,6 +180,9 @@ export const readRun = (dir: string): RunData => {
 const keyOf = (data: RunData): string => `${data.run.run_id}|${data.run.domain}`
 
 /** Both arms of a run share run_id; a domain is scored on its own. */
+/** How far apart a run's arms may start. */
+const ONE_DAY_MS = 24 * 60 * 60 * 1000
+
 export const pairRuns = (runs: readonly RunData[]): { plain?: RunData; reactor?: RunData; playbook?: RunData }[] => {
   const groups = new Map<string, { plain?: RunData; reactor?: RunData; playbook?: RunData }>()
   for (const data of runs) {
@@ -195,6 +203,18 @@ export const pairRuns = (runs: readonly RunData[]): { plain?: RunData; reactor?:
       if (differs !== undefined) {
         throw new Error(
           `run ${plain.run.run_id}: the arms differ on ${differs} (plain ${plain.run[differs]}, ${other.run.arm} ${other.run[differs]})`,
+        )
+      }
+      // A run's arms run together. The Nov 5 runs paired a plain arm from Oct 27, its harness_commit rewritten to
+      // match: the start the harness wrote is what such a copy carries with it (2026-11-12).
+      const [startedPlain, startedOther] = [Date.parse(plain.run.started_at), Date.parse(other.run.started_at)]
+      if (
+        !Number.isFinite(startedPlain) ||
+        !Number.isFinite(startedOther) ||
+        Math.abs(startedPlain - startedOther) > ONE_DAY_MS
+      ) {
+        throw new Error(
+          `run ${plain.run.run_id}: the arms started more than 24 hours apart (plain ${plain.run.started_at}, ${other.run.arm} ${other.run.started_at}); a run's arms run together`,
         )
       }
       // A saving read across two price books is the price change, not the arms.
@@ -393,6 +413,7 @@ const resultsOf = (data: RunData, plain: RunData | undefined): Results => {
     domain: run.domain,
     run_id: run.run_id,
     harness_commit: run.harness_commit,
+    started_at: run.started_at,
     prices: run.prices,
     days: Array.from({ length: run.days }, (_, i) => dayOf(data, i + 1, plain)),
     ...(run.arm === 'playbook'

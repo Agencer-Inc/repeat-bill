@@ -407,6 +407,7 @@ it.
 | `small_model` | string or null | The playbook arm's small model; `null` on the plain arm. |
 | `domain` | string | `support-ops`, `files-ops` or `long-jobs`. The same on both arms. |
 | `run_id` | string | The same on both arms of one run. |
+| `started_at` | string | When the arm started, as the harness wrote it into `run.json`. A run's arms start within 24 hours of each other, or the scorer and the renderer refuse the pair: an arm from another run is not part of this one. |
 | `harness_commit` | string | The git commit of bench/ that ran. The same on both arms. |
 | `prices` | object | `{ <model>: { in_per_mtok, out_per_mtok } }`, the prices every step was costed at. |
 | `days` | array | One entry per day, in order. |

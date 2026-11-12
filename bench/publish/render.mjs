@@ -214,6 +214,9 @@ export const readResult = (file, text) => {
 
 const SHARED = ['large_model', 'domain', 'harness_commit']
 
+// How far apart a run's arms may start.
+const ONE_DAY_MS = 24 * 60 * 60 * 1000
+
 // The sentence the scorer (bench/score/score.ts) puts first in both arms' notes of a run asked
 // with --words same; results.json has no field for the setting.
 const SAME_WORDS_NOTE =
@@ -275,6 +278,12 @@ export const pairRuns = (entries) => {
       }
       if (wordsOf(plain) !== wordsOf(other)) {
         throw differ('words', wordsOf(plain), wordsOf(other), other.arm)
+      }
+      // A run's arms run together: an arm copied in from another run started on another day (2026-11-12).
+      if (Math.abs(Date.parse(plain.started_at) - Date.parse(other.started_at)) > ONE_DAY_MS) {
+        throw new Refusal(
+          `run ${named}: the arms started more than 24 hours apart (plain ${plain.started_at}, ${other.arm} ${other.started_at})`,
+        )
       }
     }
     if (reactor !== null && playbook !== null && reactor.small_model !== playbook.small_model) {
