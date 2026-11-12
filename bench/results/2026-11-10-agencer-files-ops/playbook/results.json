@@ -1,0 +1,554 @@
+{
+  "benchmark": "repeat-bill",
+  "version": "0.1",
+  "arm": "playbook",
+  "large_model": "claude-opus-5-5",
+  "small_model": "claude-haiku-5-5",
+  "domain": "files-ops",
+  "run_id": "2026-11-10-agencer",
+  "harness_commit": "8ee89f335956b240a14d7ec5d4c51d48b098b456",
+  "prices": {
+    "claude-opus-5-5": {
+      "in_per_mtok": 4,
+      "out_per_mtok": 20
+    },
+    "claude-haiku-5-5": {
+      "in_per_mtok": 0.1,
+      "out_per_mtok": 0.5
+    }
+  },
+  "days": [
+    {
+      "day": 1,
+      "tasks": 20,
+      "passed": 20,
+      "tool_steps": 44,
+      "talk_steps": 15,
+      "small_model_tool_steps": 4,
+      "no_model_tool_steps": 13,
+      "wrong_tool_calls": 0,
+      "failed_calls_on_passed": 0,
+      "cost_usd": 0.449312,
+      "cost_per_solved_usd": 0.022466,
+      "median_task_seconds": 9.665,
+      "step_ms": {
+        "no_model": {
+          "steps": 13,
+          "median_ms": 2860,
+          "p90_ms": 4193
+        },
+        "small": {
+          "steps": 4,
+          "median_ms": 4564,
+          "p90_ms": 6771
+        },
+        "large": {
+          "steps": 1,
+          "median_ms": 7173,
+          "p90_ms": 7173
+        },
+        "handed_back": {
+          "steps": 26,
+          "median_ms": 2276,
+          "p90_ms": 7248
+        }
+      }
+    },
+    {
+      "day": 2,
+      "tasks": 20,
+      "passed": 20,
+      "tool_steps": 40,
+      "talk_steps": 13,
+      "small_model_tool_steps": 7,
+      "no_model_tool_steps": 23,
+      "wrong_tool_calls": 0,
+      "failed_calls_on_passed": 0,
+      "cost_usd": 0.231124,
+      "cost_per_solved_usd": 0.011556,
+      "median_task_seconds": 7.21,
+      "step_ms": {
+        "no_model": {
+          "steps": 23,
+          "median_ms": 2354,
+          "p90_ms": 3810
+        },
+        "small": {
+          "steps": 7,
+          "median_ms": 2150,
+          "p90_ms": 4150
+        },
+        "handed_back": {
+          "steps": 10,
+          "median_ms": 2683,
+          "p90_ms": 4210
+        }
+      }
+    },
+    {
+      "day": 3,
+      "tasks": 20,
+      "passed": 19,
+      "tool_steps": 39,
+      "talk_steps": 9,
+      "small_model_tool_steps": 8,
+      "no_model_tool_steps": 22,
+      "wrong_tool_calls": 1,
+      "failed_calls_on_passed": 0,
+      "cost_usd": 0.187985,
+      "cost_per_solved_usd": 0.009894,
+      "median_task_seconds": 7.338,
+      "step_ms": {
+        "no_model": {
+          "steps": 22,
+          "median_ms": 2379,
+          "p90_ms": 3995
+        },
+        "small": {
+          "steps": 8,
+          "median_ms": 2199,
+          "p90_ms": 3530
+        },
+        "handed_back": {
+          "steps": 9,
+          "median_ms": 3346,
+          "p90_ms": 6842
+        }
+      }
+    },
+    {
+      "day": 4,
+      "tasks": 20,
+      "passed": 20,
+      "tool_steps": 39,
+      "talk_steps": 11,
+      "small_model_tool_steps": 10,
+      "no_model_tool_steps": 24,
+      "wrong_tool_calls": 0,
+      "failed_calls_on_passed": 0,
+      "cost_usd": 0.170547,
+      "cost_per_solved_usd": 0.008527,
+      "median_task_seconds": 6.258,
+      "step_ms": {
+        "no_model": {
+          "steps": 24,
+          "median_ms": 2175,
+          "p90_ms": 3951
+        },
+        "small": {
+          "steps": 10,
+          "median_ms": 2172,
+          "p90_ms": 3480
+        },
+        "handed_back": {
+          "steps": 5,
+          "median_ms": 5281,
+          "p90_ms": 6527
+        }
+      }
+    }
+  ],
+  "step_lines": [
+    {
+      "day": 1,
+      "job": "move-one",
+      "line": "1 move_file ask ok, reply run_model"
+    },
+    {
+      "day": 1,
+      "job": "rename-one",
+      "line": "1 rename_file needs_model, agent large rename_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "tag-one",
+      "line": "1 tag_file needs_model, agent large tag_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "find-and-tag",
+      "line": "1 search_files run_model, 1 search_files large ok, 2 tag_file needs_model, agent large tag_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "find-and-move",
+      "line": "1 search_files ask ok, 2 move_file needs_model, agent large list_folder, agent large move_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "new-folder-move",
+      "line": "1 create_folder needs_model, agent large list_folder, agent large create_folder, agent none move_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "share-viewer",
+      "line": "1 share_file needs_model, agent large share_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "share-editor-by-name",
+      "line": "1 share_file needs_model, agent small search_files, agent large read_file, agent large share_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "owner-from-text",
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent large set_field, reply large"
+    },
+    {
+      "day": 1,
+      "job": "client-from-text",
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent large set_field, reply large"
+    },
+    {
+      "day": 1,
+      "job": "talk-budget",
+      "line": "1 read_file ask ok, reply run_model"
+    },
+    {
+      "day": 1,
+      "job": "talk-count",
+      "line": "1 list_folder ask ok, reply run_model, reply large"
+    },
+    {
+      "day": 1,
+      "job": "talk-search",
+      "line": "1 search_files ask ok, reply run_model"
+    },
+    {
+      "day": 1,
+      "job": "tag-folder",
+      "line": "1 list_folder ask ok, 2 tag_file needs_model, agent large tag_file, agent large tag_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "rename-and-tag",
+      "line": "1 tag_file ask ok, 2 rename_file ask ok, reply run_model"
+    },
+    {
+      "day": 1,
+      "job": "move-and-share",
+      "line": "1 move_file ask ok, 2 share_file needs_model, agent large share_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "archive-done",
+      "line": "reply needs_model, agent small list_folder, agent large read_file, agent large read_file, agent large read_file, agent large read_file, agent large list_folder, agent large move_file, agent large move_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "set-two-fields",
+      "line": "1 set_field needs_model, agent small read_file, agent small set_field, agent large set_field, reply large"
+    },
+    {
+      "day": 1,
+      "job": "share-two",
+      "line": "1 share_file needs_model, agent large read_file, agent large share_file, agent large share_file, reply large"
+    },
+    {
+      "day": 1,
+      "job": "talk-shared-with",
+      "line": "1 read_file ask ok, reply run_model"
+    },
+    {
+      "day": 2,
+      "job": "move-one",
+      "line": "1 move_file ask ok, reply run_model"
+    },
+    {
+      "day": 2,
+      "job": "rename-one",
+      "line": "1 rename_file ask ok, reply run_model"
+    },
+    {
+      "day": 2,
+      "job": "tag-one",
+      "line": "1 tag_file ask ok, reply run_model"
+    },
+    {
+      "day": 2,
+      "job": "find-and-tag",
+      "line": "1 search_files ask ok, 2 tag_file run_model, agent none tag_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "find-and-move",
+      "line": "1 search_files ask ok, 2 move_file run_model, agent none move_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "new-folder-move",
+      "line": "1 create_folder ask ok, 2 move_file ask ok, reply run_model"
+    },
+    {
+      "day": 2,
+      "job": "share-viewer",
+      "line": "1 share_file needs_model, agent large read_file, agent large share_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "share-editor-by-name",
+      "line": "1 read_file ask ok, 2 share_file needs_model, agent large share_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "owner-from-text",
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent small set_field, reply large"
+    },
+    {
+      "day": 2,
+      "job": "client-from-text",
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent large set_field, reply large"
+    },
+    {
+      "day": 2,
+      "job": "talk-budget",
+      "line": "1 read_file ask ok, reply run_model"
+    },
+    {
+      "day": 2,
+      "job": "talk-count",
+      "line": "1 list_folder ask ok, reply run_model, reply large"
+    },
+    {
+      "day": 2,
+      "job": "talk-search",
+      "line": "1 search_files ask ok, reply run_model"
+    },
+    {
+      "day": 2,
+      "job": "tag-folder",
+      "line": "1 list_folder ask ok, 2 tag_file needs_model, agent small tag_file, agent small tag_file, agent large tag_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "rename-and-tag",
+      "line": "1 rename_file ask ok, 2 tag_file needs_model, agent large tag_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "move-and-share",
+      "line": "1 move_file ask ok, 2 share_file needs_model, agent large share_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "archive-done",
+      "line": "reply needs_model, agent small list_folder, agent large read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, agent large move_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "set-two-fields",
+      "line": "1 set_field ask ok, 2 set_field ask ok, reply run_model"
+    },
+    {
+      "day": 2,
+      "job": "share-two",
+      "line": "1 share_file needs_model, agent none share_file, agent none share_file, reply large"
+    },
+    {
+      "day": 2,
+      "job": "talk-shared-with",
+      "line": "1 read_file ask ok, reply run_model, reply large"
+    },
+    {
+      "day": 3,
+      "job": "move-one",
+      "line": "1 move_file ask ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "rename-one",
+      "line": "1 rename_file ask ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "tag-one",
+      "line": "1 tag_file ask ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "find-and-tag",
+      "line": "1 search_files ask ok, 2 tag_file run_model, 2 tag_file result ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "find-and-move",
+      "line": "1 search_files ask ok, 2 move_file run_model, 2 move_file result ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "new-folder-move",
+      "line": "1 create_folder ask ok, 2 move_file ask ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "share-viewer",
+      "line": "1 share_file needs_model, agent large read_file, agent large share_file, reply large"
+    },
+    {
+      "day": 3,
+      "job": "share-editor-by-name",
+      "line": "1 search_files ask empty, stopped: an empty result"
+    },
+    {
+      "day": 3,
+      "job": "owner-from-text",
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent small set_field, reply large"
+    },
+    {
+      "day": 3,
+      "job": "client-from-text",
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent large set_field, reply large"
+    },
+    {
+      "day": 3,
+      "job": "talk-budget",
+      "line": "1 read_file ask ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "talk-count",
+      "line": "1 list_folder ask ok, reply run_model, reply large"
+    },
+    {
+      "day": 3,
+      "job": "talk-search",
+      "line": "1 search_files ask ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "tag-folder",
+      "line": "1 list_folder ask ok, 2 tag_file needs_model, agent small tag_file, agent small tag_file, agent large tag_file, reply large"
+    },
+    {
+      "day": 3,
+      "job": "rename-and-tag",
+      "line": "1 tag_file ask ok, 2 rename_file ask ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "move-and-share",
+      "line": "1 move_file ask ok, 2 share_file needs_model, agent large share_file, reply large"
+    },
+    {
+      "day": 3,
+      "job": "archive-done",
+      "line": "reply needs_model, agent small list_folder, agent small read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, reply large"
+    },
+    {
+      "day": 3,
+      "job": "set-two-fields",
+      "line": "1 set_field ask ok, 2 set_field ask ok, reply run_model"
+    },
+    {
+      "day": 3,
+      "job": "share-two",
+      "line": "1 share_file needs_model, agent large read_file, agent large share_file, agent large share_file, reply large"
+    },
+    {
+      "day": 3,
+      "job": "talk-shared-with",
+      "line": "1 read_file ask ok, reply run_model, reply large"
+    },
+    {
+      "day": 4,
+      "job": "move-one",
+      "line": "1 move_file ask ok, reply run_model"
+    },
+    {
+      "day": 4,
+      "job": "rename-one",
+      "line": "1 rename_file ask ok, reply run_model"
+    },
+    {
+      "day": 4,
+      "job": "tag-one",
+      "line": "1 tag_file ask ok, reply run_model"
+    },
+    {
+      "day": 4,
+      "job": "find-and-tag",
+      "line": "1 search_files ask ok, 2 tag_file run_model, agent none tag_file, reply large"
+    },
+    {
+      "day": 4,
+      "job": "find-and-move",
+      "line": "1 search_files ask ok, 2 move_file run_model, agent none move_file, reply large"
+    },
+    {
+      "day": 4,
+      "job": "new-folder-move",
+      "line": "1 create_folder ask ok, 2 move_file ask ok, reply run_model"
+    },
+    {
+      "day": 4,
+      "job": "share-viewer",
+      "line": "1 share_file needs_model, agent none share_file, reply large"
+    },
+    {
+      "day": 4,
+      "job": "share-editor-by-name",
+      "line": "1 read_file ask ok, 2 share_file needs_model, agent large share_file, reply large"
+    },
+    {
+      "day": 4,
+      "job": "owner-from-text",
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent small set_field, reply large"
+    },
+    {
+      "day": 4,
+      "job": "client-from-text",
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent large set_field, reply large"
+    },
+    {
+      "day": 4,
+      "job": "talk-budget",
+      "line": "1 read_file ask ok, reply run_model"
+    },
+    {
+      "day": 4,
+      "job": "talk-count",
+      "line": "1 list_folder ask ok, reply run_model, reply large"
+    },
+    {
+      "day": 4,
+      "job": "talk-search",
+      "line": "1 search_files ask ok, reply run_model"
+    },
+    {
+      "day": 4,
+      "job": "tag-folder",
+      "line": "1 list_folder ask ok, 2 tag_file needs_model, agent small tag_file, agent small tag_file, agent small tag_file, reply large"
+    },
+    {
+      "day": 4,
+      "job": "rename-and-tag",
+      "line": "1 tag_file ask ok, 2 rename_file ask ok, reply run_model"
+    },
+    {
+      "day": 4,
+      "job": "move-and-share",
+      "line": "1 share_file needs_model, agent none share_file, agent none move_file, reply large"
+    },
+    {
+      "day": 4,
+      "job": "archive-done",
+      "line": "reply needs_model, agent small list_folder, agent small read_file, agent small read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, reply large"
+    },
+    {
+      "day": 4,
+      "job": "set-two-fields",
+      "line": "1 set_field ask ok, 2 set_field ask ok, reply run_model"
+    },
+    {
+      "day": 4,
+      "job": "share-two",
+      "line": "1 share_file needs_model, agent large share_file, agent large share_file, reply large"
+    },
+    {
+      "day": 4,
+      "job": "talk-shared-with",
+      "line": "1 read_file ask ok, reply run_model"
+    }
+  ],
+  "notes": "The playbook arm ran the library client, the harness's stand-in for the customer's playbook library, with fills that let the door call a model. The playbook arm's cost is a floor, so its saving is a ceiling: it counts what the door's answers name as spent and what its reply calls report, and a step filled with no model costs $0. On the playbook arm a failed or an empty result of a step the playbook made stops the job, so that task never passes; a call the customer's agent makes after the playbook may fail and the job goes on. Prices are list prices, with no batch or prompt-prefix discount, on both arms. The Reactor key was used by run 2026-10-16-d-before before this run: day 1 is not cold."
+}

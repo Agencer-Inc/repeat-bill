@@ -1,0 +1,59 @@
+# The benchmark's own check, on every pull request that touches bench/ or the
+# word list its tests import, and again on main once one merges.
+#
+# No secrets. The renderer and its tests install nothing: they use Node's own
+# modules and the word list in test/support/, so a result submitted from a fork
+# is checked exactly as the team's own would be. `bench/SUBMIT.md` sends
+# submitters here. The measuring half's step installs bench/'s own dependencies.
+name: Bench
+
+on:
+  pull_request:
+    paths:
+      - 'bench/**'
+      - '.github/workflows/bench.yml'
+  # Two pull requests can each pass alone and break main together.
+  push:
+    branches: [main]
+    paths:
+      - 'bench/**'
+      - '.github/workflows/bench.yml'
+
+concurrency:
+  # A second push to the same pull request, or to main, cancels the first: the
+  # older answer is about code nobody has any more.
+  group: bench-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      # The repository's Node, as in ci.yml. No cache: the renderer installs nothing.
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      # A quoted glob, not a folder: `node --test` reads its arguments as globs,
+      # and a bare folder name matches no file.
+      - name: The renderer's tests
+        run: node --test 'bench/publish/*_test.mjs'
+
+      # The measuring half's own tests, once its package.json lands; green before that.
+      - name: The measuring half's tests
+        run: if [ -f bench/package.json ]; then npm --prefix bench ci && npm --prefix bench run typecheck && npm --prefix bench test; fi
+
+      - name: The fixture renders
+        run: node bench/publish/render.mjs --in bench/publish/fixtures/two-arms --out "$RUNNER_TEMP/fixture/index.html"
+
+      # Rendering is the validation: every bench/results/**/results.json meets the
+      # schema and the rules render.mjs checks, or this step fails naming the file
+      # and the field, or the run. A results folder with no results passes.
+      - name: Every published result is valid
+        run: node bench/publish/render.mjs --in bench/results --out "$RUNNER_TEMP/results/index.html"

@@ -1,0 +1,25 @@
+{
+  "name": "repeat-bill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An open benchmark of what an agent's bill does on repeated tool work asked in new words.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "bench": "node cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.5",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@agencer/reactor": "^1.0.0"
+  }
+}

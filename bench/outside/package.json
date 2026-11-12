@@ -1,0 +1,11 @@
+{
+  "name": "repeat-bill-outside",
+  "private": true,
+  "type": "module",
+  "description": "The outside test: a plain OpenAI-SDK agent on the bench's jobs, direct and through Reactor, as a customer runs it.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@agencer/reactor": "^1.0.0",
+    "openai": "^6.0.0"
+  }
+}

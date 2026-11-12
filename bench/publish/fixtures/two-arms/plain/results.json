@@ -1,0 +1,64 @@
+{
+  "benchmark": "repeat-bill",
+  "version": "0.1",
+  "arm": "plain",
+  "large_model": "example-large",
+  "small_model": null,
+  "domain": "fixture-orders",
+  "run_id": "fixture-2026-10-14",
+  "harness_commit": "0123456789abcdef0123456789abcdef01234567",
+  "prices": {
+    "example-large": { "in_per_mtok": 3, "out_per_mtok": 15 }
+  },
+  "days": [
+    {
+      "day": 1,
+      "tasks": 10,
+      "passed": 8,
+      "tool_steps": 60,
+      "talk_steps": 50,
+      "small_model_tool_steps": 0,
+      "wrong_tool_calls": null,
+      "cost_usd": 1.2,
+      "cost_per_solved_usd": 0.15,
+      "median_task_seconds": 41.5
+    },
+    {
+      "day": 2,
+      "tasks": 10,
+      "passed": 8,
+      "tool_steps": 58,
+      "talk_steps": 48,
+      "small_model_tool_steps": 0,
+      "wrong_tool_calls": null,
+      "cost_usd": 1.16,
+      "cost_per_solved_usd": 0.145,
+      "median_task_seconds": 40.2
+    },
+    {
+      "day": 3,
+      "tasks": 10,
+      "passed": 9,
+      "tool_steps": 61,
+      "talk_steps": 50,
+      "small_model_tool_steps": 0,
+      "wrong_tool_calls": null,
+      "cost_usd": 1.26,
+      "cost_per_solved_usd": 0.14,
+      "median_task_seconds": 42
+    },
+    {
+      "day": 4,
+      "tasks": 10,
+      "passed": 8,
+      "tool_steps": 59,
+      "talk_steps": 49,
+      "small_model_tool_steps": 0,
+      "wrong_tool_calls": null,
+      "cost_usd": 1.2,
+      "cost_per_solved_usd": 0.15,
+      "median_task_seconds": 40.8
+    }
+  ],
+  "notes": "Synthetic numbers for the renderer's tests. Not a measurement."
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "repeat-bill results.json",
+  "description": "One arm of one run of the repeat-bill benchmark. Every arm of a run shares its run_id. bench/METHOD.md defines every field.",
+  "type": "object",
+  "required": [
+    "benchmark",
+    "version",
+    "arm",
+    "large_model",
+    "small_model",
+    "domain",
+    "run_id",
+    "harness_commit",
+    "prices",
+    "days",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "benchmark": { "enum": ["repeat-bill"] },
+    "version": { "enum": ["0.1"] },
+    "arm": { "enum": ["plain", "reactor", "playbook"] },
+    "large_model": { "type": "string", "pattern": "\\S" },
+    "small_model": {
+      "description": "null on the plain arm; the reactor and playbook arms name their small model.",
+      "type": ["string", "null"],
+      "pattern": "\\S"
+    },
+    "domain": { "type": "string", "pattern": "\\S" },
+    "run_id": { "type": "string", "pattern": "\\S" },
+    "harness_commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+    "prices": {
+      "description": "US dollars per million tokens, by model id.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["in_per_mtok", "out_per_mtok"],
+        "properties": {
+          "in_per_mtok": { "type": "number", "minimum": 0 },
+          "out_per_mtok": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "days": {
+      "description": "One entry per round, day 1 to day N, each once.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "day",
+          "tasks",
+          "passed",
+          "tool_steps",
+          "talk_steps",
+          "small_model_tool_steps",
+          "wrong_tool_calls",
+          "cost_usd",
+          "cost_per_solved_usd",
+          "median_task_seconds"
+        ],
+        "properties": {
+          "day": { "type": "integer", "minimum": 1 },
+          "tasks": { "type": "integer", "minimum": 1 },
+          "passed": { "type": "integer", "minimum": 0 },
+          "tool_steps": { "type": "integer", "minimum": 0 },
+          "talk_steps": { "type": "integer", "minimum": 0 },
+          "small_model_tool_steps": { "type": "integer", "minimum": 0 },
+          "no_model_tool_steps": {
+            "description": "The playbook arm only, and not required: tool steps filled with no model, by the client or by the door from the ask or a result.",
+            "type": "integer",
+            "minimum": 0
+          },
+          "wrong_tool_calls": {
+            "description": "null on the plain arm, and on the reactor or playbook arm when not measured.",
+            "type": ["integer", "null"],
+            "minimum": 0
+          },
+          "cost_usd": { "type": "number", "minimum": 0 },
+          "cost_per_solved_usd": {
+            "description": "cost_usd / passed; null exactly when passed is 0.",
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "median_task_seconds": { "type": "number", "minimum": 0 },
+          "step_ms": {
+            "description": "Not required, and only on a run whose step lines carry their time (since 2026-11-09): a tool step's wall time in ms, from the step before it in the job to its own end, keyed by who filled it: plain, no_model, small, large (at the door) or handed_back (the agent's own large model).",
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["steps", "median_ms", "p90_ms"],
+              "additionalProperties": false,
+              "properties": {
+                "steps": { "type": "integer", "minimum": 1 },
+                "median_ms": { "type": "integer", "minimum": 0 },
+                "p90_ms": { "type": "integer", "minimum": 0 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "step_lines": {
+      "description": "The playbook arm only, and not required: one line per task saying who filled each step and how its job ended.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["day", "job", "line"],
+        "additionalProperties": false,
+        "properties": {
+          "day": { "type": "integer", "minimum": 1 },
+          "job": { "type": "string", "pattern": "\\S" },
+          "line": { "type": "string", "pattern": "\\S" }
+        }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

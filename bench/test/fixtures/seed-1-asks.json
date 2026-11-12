@@ -1,0 +1,182 @@
+[
+  {
+    "id": "support-ops.d1.refund-full",
+    "form": 2,
+    "ask": "Can you give the customer all their money back for O-20156?"
+  },
+  {
+    "id": "support-ops.d1.refund-item",
+    "form": 2,
+    "ask": "Order O-60809: please refund the Phone Stand and nothing else."
+  },
+  {
+    "id": "support-ops.d1.refund-latest-by-email",
+    "form": 0,
+    "ask": "The customer at mateo.okafor@letters.test wants their most recent order refunded in full."
+  },
+  {
+    "id": "support-ops.d2.refund-full",
+    "form": 4,
+    "ask": "Refund the whole of order O-34718."
+  },
+  {
+    "id": "support-ops.d2.refund-item",
+    "form": 3,
+    "ask": "The customer returned the Wool Scarf from O-96255; give them its money back."
+  },
+  {
+    "id": "support-ops.d2.refund-latest-by-email",
+    "form": 1,
+    "ask": "Refund the latest order placed by tariq.laine@letters.test, all of it."
+  },
+  {
+    "id": "support-ops.d3.refund-full",
+    "form": 1,
+    "ask": "Order O-67225 needs a full refund."
+  },
+  {
+    "id": "support-ops.d3.refund-item",
+    "form": 4,
+    "ask": "Refund the Thermos line of order O-54866, not the rest of it."
+  },
+  {
+    "id": "support-ops.d3.refund-latest-by-email",
+    "form": 4,
+    "ask": "Give leila.zielinski@letters.test a full refund on the order they placed most recently."
+  },
+  {
+    "id": "support-ops.d4.refund-full",
+    "form": 3,
+    "ask": "Issue a complete refund on O-57690, please."
+  },
+  {
+    "id": "support-ops.d4.refund-item",
+    "form": 0,
+    "ask": "Refund just the Plant Pot on order O-27118."
+  },
+  {
+    "id": "support-ops.d4.refund-latest-by-email",
+    "form": 2,
+    "ask": "uma.eriksen@post.test asked for a full refund on their newest order. Please do it."
+  },
+  {
+    "id": "files-ops.d1.move-one",
+    "form": 0,
+    "ask": "Move /tide-wharf/drafts/lantern-oasis.txt into /tide-wharf/final."
+  },
+  {
+    "id": "files-ops.d1.rename-one",
+    "form": 1,
+    "ask": "Change the name of /bayou-valley/drafts/coral-heron.txt to gully-canyon.txt."
+  },
+  {
+    "id": "files-ops.d1.tag-one",
+    "form": 2,
+    "ask": "Please put a basalt-summit tag on /granite-ember/drafts/yarrow-ember.txt."
+  },
+  {
+    "id": "files-ops.d2.move-one",
+    "form": 3,
+    "ask": "Relocate /russet-clover/drafts/thistle-orbit.txt to /russet-clover/final."
+  },
+  {
+    "id": "files-ops.d2.rename-one",
+    "form": 0,
+    "ask": "Rename /spruce-aspen/drafts/grove-zephyr.txt to pine-zephyr.txt."
+  },
+  {
+    "id": "files-ops.d2.tag-one",
+    "form": 3,
+    "ask": "Mark /inlet-nectar/drafts/fern-maple.txt with the tag yarrow-estuary."
+  },
+  {
+    "id": "files-ops.d3.move-one",
+    "form": 2,
+    "ask": "/nimbus-mantle/drafts/prairie-timber.txt belongs in /nimbus-mantle/final; move it there."
+  },
+  {
+    "id": "files-ops.d3.rename-one",
+    "form": 2,
+    "ask": "/pine-forge/drafts/acorn-granite.txt should be called violet-cedar.txt. Rename it."
+  },
+  {
+    "id": "files-ops.d3.tag-one",
+    "form": 4,
+    "ask": "/indigo-plume/drafts/heron-timber.txt needs the dusk-nutmeg tag."
+  },
+  {
+    "id": "files-ops.d4.move-one",
+    "form": 1,
+    "ask": "Please put /jade-bayou/drafts/nook-jasper.txt in the folder /jade-bayou/final."
+  },
+  {
+    "id": "files-ops.d4.rename-one",
+    "form": 3,
+    "ask": "Please give /hazel-basalt/drafts/ivory-grove.txt the new name jasper-wharf.txt."
+  },
+  {
+    "id": "files-ops.d4.tag-one",
+    "form": 0,
+    "ask": "Tag /dune-aspen/drafts/summit-beacon.txt as walnut-gully."
+  },
+  {
+    "id": "long-jobs.d1.raise-split",
+    "form": 0,
+    "ask": "Raise purchase orders for request RQ-67251 and submit them."
+  },
+  {
+    "id": "long-jobs.d1.raise-and-tell",
+    "form": 3,
+    "ask": "Request RQ-93837 is approved: put it on an order, submit it, and email the requester the PO number."
+  },
+  {
+    "id": "long-jobs.d1.draft-and-total",
+    "form": 3,
+    "ask": "Create a draft purchase order holding every line of request RQ-44053, and email its requester the order total. Do not submit it."
+  },
+  {
+    "id": "long-jobs.d2.raise-split",
+    "form": 1,
+    "ask": "Request RQ-72001 is approved. Order everything on it, one order per vendor, and submit the orders."
+  },
+  {
+    "id": "long-jobs.d2.raise-and-tell",
+    "form": 1,
+    "ask": "Raise request RQ-21371 as a purchase order, submit it, then email the person who asked for it the order number."
+  },
+  {
+    "id": "long-jobs.d2.draft-and-total",
+    "form": 0,
+    "ask": "Put request RQ-69043 on a draft order but do not submit it; email the requester what the order comes to."
+  },
+  {
+    "id": "long-jobs.d3.raise-split",
+    "form": 3,
+    "ask": "Place the orders for request RQ-93074 and send them to the vendors."
+  },
+  {
+    "id": "long-jobs.d3.raise-and-tell",
+    "form": 2,
+    "ask": "Please place request RQ-78046 and email its requester the number of the order it went on."
+  },
+  {
+    "id": "long-jobs.d3.draft-and-total",
+    "form": 4,
+    "ask": "Request RQ-51957: make the draft order, keep it as a draft, and send the requester its total by email."
+  },
+  {
+    "id": "long-jobs.d4.raise-split",
+    "form": 2,
+    "ask": "Please turn request RQ-85852 into submitted purchase orders."
+  },
+  {
+    "id": "long-jobs.d4.raise-and-tell",
+    "form": 4,
+    "ask": "Submit an order for everything request RQ-77499 asks for, and tell the requester its number by email."
+  },
+  {
+    "id": "long-jobs.d4.draft-and-total",
+    "form": 1,
+    "ask": "Draft an order for request RQ-85784, leave it unsubmitted, and email the person who asked for it the total."
+  }
+]

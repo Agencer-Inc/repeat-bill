@@ -1,0 +1,99 @@
+{
+  "benchmark": "repeat-bill",
+  "version": "0.1",
+  "arm": "plain",
+  "large_model": "claude-opus-5-5",
+  "small_model": null,
+  "domain": "files-ops",
+  "run_id": "2026-11-10-agencer-same",
+  "harness_commit": "8ee89f335956b240a14d7ec5d4c51d48b098b456",
+  "prices": {
+    "claude-opus-5-5": {
+      "in_per_mtok": 4,
+      "out_per_mtok": 20
+    }
+  },
+  "days": [
+    {
+      "day": 1,
+      "tasks": 20,
+      "passed": 20,
+      "tool_steps": 45,
+      "talk_steps": 20,
+      "small_model_tool_steps": 0,
+      "wrong_tool_calls": null,
+      "failed_calls_on_passed": 0,
+      "cost_usd": 0.55892,
+      "cost_per_solved_usd": 0.027946,
+      "median_task_seconds": 3.767,
+      "step_ms": {
+        "plain": {
+          "steps": 45,
+          "median_ms": 1424,
+          "p90_ms": 1985
+        }
+      }
+    },
+    {
+      "day": 2,
+      "tasks": 20,
+      "passed": 20,
+      "tool_steps": 45,
+      "talk_steps": 20,
+      "small_model_tool_steps": 0,
+      "wrong_tool_calls": null,
+      "failed_calls_on_passed": 0,
+      "cost_usd": 0.556324,
+      "cost_per_solved_usd": 0.027816,
+      "median_task_seconds": 4.386,
+      "step_ms": {
+        "plain": {
+          "steps": 45,
+          "median_ms": 1434,
+          "p90_ms": 2095
+        }
+      }
+    },
+    {
+      "day": 3,
+      "tasks": 20,
+      "passed": 20,
+      "tool_steps": 45,
+      "talk_steps": 20,
+      "small_model_tool_steps": 0,
+      "wrong_tool_calls": null,
+      "failed_calls_on_passed": 0,
+      "cost_usd": 0.553608,
+      "cost_per_solved_usd": 0.02768,
+      "median_task_seconds": 5.056,
+      "step_ms": {
+        "plain": {
+          "steps": 45,
+          "median_ms": 1431,
+          "p90_ms": 2081
+        }
+      }
+    },
+    {
+      "day": 4,
+      "tasks": 20,
+      "passed": 20,
+      "tool_steps": 43,
+      "talk_steps": 20,
+      "small_model_tool_steps": 0,
+      "wrong_tool_calls": null,
+      "failed_calls_on_passed": 0,
+      "cost_usd": 0.53952,
+      "cost_per_solved_usd": 0.026976,
+      "median_task_seconds": 4.403,
+      "step_ms": {
+        "plain": {
+          "steps": 43,
+          "median_ms": 1514,
+          "p90_ms": 2243
+        }
+      }
+    }
+  ],
+  "notes": "This run asked each job in the same words every day, its day-1 phrasing, with new data each day (--words same). Prices are list prices, with no batch or prompt-prefix discount, on both arms. wrong_tool_calls is null on the plain arm: it is the reference the reactor arm is measured against."
+}
