@@ -5,9 +5,9 @@
   "large_model": "claude-opus-5-5",
   "small_model": null,
   "domain": "support-ops",
-  "run_id": "2026-11-10-agencer-same",
-  "harness_commit": "8ee89f335956b240a14d7ec5d4c51d48b098b456",
-  "started_at": "2026-11-10T10:56:07.701Z",
+  "run_id": "2026-11-12-agencer-same",
+  "harness_commit": "8bd05984facd8a139e7711b8c97c8ffe630e021b",
+  "started_at": "2026-11-12T14:23:51.428Z",
   "prices": {
     "claude-opus-5-5": {
       "in_per_mtok": 4,
@@ -24,14 +24,14 @@
       "small_model_tool_steps": 0,
       "wrong_tool_calls": null,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.60742,
-      "cost_per_solved_usd": 0.030371,
-      "median_task_seconds": 4.607,
+      "cost_usd": 0.608908,
+      "cost_per_solved_usd": 0.030445,
+      "median_task_seconds": 3.936,
       "step_ms": {
         "plain": {
           "steps": 46,
-          "median_ms": 1426,
-          "p90_ms": 1919
+          "median_ms": 1247,
+          "p90_ms": 1811
         }
       }
     },
@@ -39,19 +39,19 @@
       "day": 2,
       "tasks": 20,
       "passed": 20,
-      "tool_steps": 47,
+      "tool_steps": 46,
       "talk_steps": 20,
       "small_model_tool_steps": 0,
       "wrong_tool_calls": null,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.61776,
-      "cost_per_solved_usd": 0.030888,
-      "median_task_seconds": 4.695,
+      "cost_usd": 0.609528,
+      "cost_per_solved_usd": 0.030476,
+      "median_task_seconds": 3.724,
       "step_ms": {
         "plain": {
-          "steps": 47,
-          "median_ms": 1424,
-          "p90_ms": 1990
+          "steps": 46,
+          "median_ms": 1312,
+          "p90_ms": 1588
         }
       }
     },
@@ -64,14 +64,14 @@
       "small_model_tool_steps": 0,
       "wrong_tool_calls": null,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.608512,
-      "cost_per_solved_usd": 0.030426,
-      "median_task_seconds": 4.875,
+      "cost_usd": 0.608188,
+      "cost_per_solved_usd": 0.030409,
+      "median_task_seconds": 4.079,
       "step_ms": {
         "plain": {
           "steps": 46,
-          "median_ms": 1435,
-          "p90_ms": 2054
+          "median_ms": 1302,
+          "p90_ms": 1644
         }
       }
     },
@@ -84,14 +84,14 @@
       "small_model_tool_steps": 0,
       "wrong_tool_calls": null,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.605756,
-      "cost_per_solved_usd": 0.030288,
-      "median_task_seconds": 4.514,
+      "cost_usd": 0.606776,
+      "cost_per_solved_usd": 0.030339,
+      "median_task_seconds": 3.509,
       "step_ms": {
         "plain": {
           "steps": 46,
-          "median_ms": 1332,
-          "p90_ms": 1844
+          "median_ms": 1190,
+          "p90_ms": 1403
         }
       }
     }

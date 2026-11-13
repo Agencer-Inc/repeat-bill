@@ -5,9 +5,9 @@
   "large_model": "claude-opus-5-5",
   "small_model": "claude-haiku-5-5",
   "domain": "support-ops",
-  "run_id": "2026-11-10-agencer",
-  "harness_commit": "8ee89f335956b240a14d7ec5d4c51d48b098b456",
-  "started_at": "2026-11-10T10:18:52.987Z",
+  "run_id": "2026-11-12-agencer-same",
+  "harness_commit": "8bd05984facd8a139e7711b8c97c8ffe630e021b",
+  "started_at": "2026-11-12T14:29:20.279Z",
   "prices": {
     "claude-opus-5-5": {
       "in_per_mtok": 4,
@@ -23,35 +23,35 @@
       "day": 1,
       "tasks": 20,
       "passed": 20,
-      "tool_steps": 48,
+      "tool_steps": 47,
       "talk_steps": 13,
       "small_model_tool_steps": 4,
       "no_model_tool_steps": 26,
       "wrong_tool_calls": 0,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.358784,
-      "cost_per_solved_usd": 0.017939,
-      "median_task_seconds": 9.299,
+      "cost_usd": 0.344768,
+      "cost_per_solved_usd": 0.017238,
+      "median_task_seconds": 9.334,
       "step_ms": {
         "no_model": {
           "steps": 26,
-          "median_ms": 2027,
-          "p90_ms": 6757
+          "median_ms": 1847,
+          "p90_ms": 7074
         },
         "small": {
           "steps": 4,
-          "median_ms": 3919,
-          "p90_ms": 5368
+          "median_ms": 3724,
+          "p90_ms": 4194
         },
         "large": {
           "steps": 5,
-          "median_ms": 1948,
-          "p90_ms": 6041
+          "median_ms": 1317,
+          "p90_ms": 8405
         },
         "handed_back": {
-          "steps": 13,
-          "median_ms": 2430,
-          "p90_ms": 5973
+          "steps": 12,
+          "median_ms": 3225,
+          "p90_ms": 5811
         }
       }
     },
@@ -60,34 +60,34 @@
       "tasks": 20,
       "passed": 20,
       "tool_steps": 47,
-      "talk_steps": 11,
+      "talk_steps": 9,
       "small_model_tool_steps": 6,
-      "no_model_tool_steps": 31,
+      "no_model_tool_steps": 35,
       "wrong_tool_calls": 0,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.222627,
-      "cost_per_solved_usd": 0.011131,
-      "median_task_seconds": 9.073,
+      "cost_usd": 0.160413,
+      "cost_per_solved_usd": 0.008021,
+      "median_task_seconds": 7.649,
       "step_ms": {
         "no_model": {
-          "steps": 31,
-          "median_ms": 1927,
-          "p90_ms": 5661
+          "steps": 35,
+          "median_ms": 1873,
+          "p90_ms": 6144
         },
         "small": {
           "steps": 6,
-          "median_ms": 3942,
-          "p90_ms": 4712
+          "median_ms": 3026,
+          "p90_ms": 4745
         },
         "large": {
           "steps": 2,
-          "median_ms": 1641,
-          "p90_ms": 1831
+          "median_ms": 1398,
+          "p90_ms": 1441
         },
         "handed_back": {
-          "steps": 8,
-          "median_ms": 2770,
-          "p90_ms": 4188
+          "steps": 4,
+          "median_ms": 2130,
+          "p90_ms": 2250
         }
       }
     },
@@ -95,30 +95,35 @@
       "day": 3,
       "tasks": 20,
       "passed": 20,
-      "tool_steps": 48,
-      "talk_steps": 12,
-      "small_model_tool_steps": 10,
-      "no_model_tool_steps": 33,
+      "tool_steps": 47,
+      "talk_steps": 9,
+      "small_model_tool_steps": 5,
+      "no_model_tool_steps": 35,
       "wrong_tool_calls": 0,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.20112,
-      "cost_per_solved_usd": 0.010056,
-      "median_task_seconds": 9.089,
+      "cost_usd": 0.170463,
+      "cost_per_solved_usd": 0.008523,
+      "median_task_seconds": 7.831,
       "step_ms": {
         "no_model": {
-          "steps": 33,
-          "median_ms": 1580,
-          "p90_ms": 4436
+          "steps": 35,
+          "median_ms": 1522,
+          "p90_ms": 4746
         },
         "small": {
-          "steps": 10,
-          "median_ms": 3086,
-          "p90_ms": 5272
+          "steps": 5,
+          "median_ms": 2574,
+          "p90_ms": 4191
+        },
+        "large": {
+          "steps": 2,
+          "median_ms": 1325,
+          "p90_ms": 1379
         },
         "handed_back": {
           "steps": 5,
-          "median_ms": 3966,
-          "p90_ms": 4689
+          "median_ms": 2553,
+          "p90_ms": 4765
         }
       }
     },
@@ -128,28 +133,33 @@
       "passed": 20,
       "tool_steps": 47,
       "talk_steps": 9,
-      "small_model_tool_steps": 10,
-      "no_model_tool_steps": 32,
+      "small_model_tool_steps": 6,
+      "no_model_tool_steps": 35,
       "wrong_tool_calls": 0,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.169071,
-      "cost_per_solved_usd": 0.008454,
-      "median_task_seconds": 8.238,
+      "cost_usd": 0.160094,
+      "cost_per_solved_usd": 0.008005,
+      "median_task_seconds": 7.876,
       "step_ms": {
         "no_model": {
-          "steps": 32,
-          "median_ms": 1663,
-          "p90_ms": 5531
+          "steps": 35,
+          "median_ms": 1466,
+          "p90_ms": 4360
         },
         "small": {
-          "steps": 10,
-          "median_ms": 2287,
-          "p90_ms": 3746
+          "steps": 6,
+          "median_ms": 3197,
+          "p90_ms": 4136
+        },
+        "large": {
+          "steps": 2,
+          "median_ms": 1736,
+          "p90_ms": 1988
         },
         "handed_back": {
-          "steps": 5,
-          "median_ms": 3264,
-          "p90_ms": 4664
+          "steps": 4,
+          "median_ms": 2198,
+          "p90_ms": 4040
         }
       }
     }
@@ -223,7 +233,7 @@
     {
       "day": 1,
       "job": "address-from-ticket",
-      "line": "1 get_ticket ask ok, 2 update_address needs_model, agent large find_customer, agent large update_address, agent none close_ticket, reply large"
+      "line": "1 get_ticket ask ok, 2 update_address needs_model, agent large update_address, agent none close_ticket, reply large"
     },
     {
       "day": 1,
@@ -283,12 +293,12 @@
     {
       "day": 2,
       "job": "escalate-named",
-      "line": "1 escalate_ticket needs_model, agent small escalate_ticket, reply large"
+      "line": "1 escalate_ticket ask ok, reply run_model"
     },
     {
       "day": 2,
       "job": "escalate-by-topic",
-      "line": "1 escalate_ticket needs_model, agent small get_ticket, agent small escalate_ticket, reply large"
+      "line": "1 get_ticket ask ok, 2 escalate_ticket needs_model, agent small escalate_ticket, reply large"
     },
     {
       "day": 2,
@@ -313,27 +323,27 @@
     {
       "day": 2,
       "job": "refund-and-reply",
-      "line": "1 get_order ask ok, 2 refund_order run_model, 2 refund_order result ok, 3 send_reply needs_model, agent large get_ticket, agent large send_reply, reply large"
+      "line": "1 get_order ask ok, 2 refund_order run_model, 2 refund_order result ok, 3 send_reply needs_model, agent none get_ticket, agent large send_reply, reply large"
     },
     {
       "day": 2,
       "job": "refund-from-ticket",
-      "line": "1 get_ticket ask ok, 2 get_order result ok, 3 refund_order needs_model, agent large refund_order, agent none close_ticket, reply large"
+      "line": "1 get_ticket ask ok, 2 get_order result ok, 3 refund_order run_model, 3 refund_order result ok, 4 close_ticket ask ok, reply run_model"
     },
     {
       "day": 2,
       "job": "address-from-ticket",
-      "line": "1 get_ticket ask ok, 2 update_address needs_model, agent large update_address, agent none close_ticket, reply large"
+      "line": "1 get_ticket ask ok, 2 update_address needs_model, agent none close_ticket, agent large update_address, reply large"
     },
     {
       "day": 2,
       "job": "goodwill-refund",
-      "line": "1 refund_order needs_model, agent small get_order, agent large find_customer, agent large refund_order, reply large"
+      "line": "1 refund_order needs_model, agent small get_order, agent small find_customer, agent small refund_order, reply large"
     },
     {
       "day": 2,
       "job": "escalate-with-note",
-      "line": "1 add_note ask ok, 2 escalate_ticket ask ok, reply run_model"
+      "line": "1 escalate_ticket ask ok, 2 add_note ask ok, reply run_model"
     },
     {
       "day": 2,
@@ -358,17 +368,17 @@
     {
       "day": 3,
       "job": "refund-full",
-      "line": "1 refund_order needs_model, agent small get_order, agent small refund_order, reply large"
+      "line": "1 get_order ask ok, 2 refund_order run_model, 2 refund_order result ok, reply run_model"
     },
     {
       "day": 3,
       "job": "refund-item",
-      "line": "1 refund_order needs_model, agent small get_order, agent small refund_order, reply large"
+      "line": "1 get_order ask ok, 2 refund_order run_model, 2 refund_order result ok, reply run_model"
     },
     {
       "day": 3,
       "job": "refund-latest-by-email",
-      "line": "1 find_customer ask ok, 2 list_orders result ok, 3 get_order result ok, 4 refund_order run_model, 4 refund_order result ok, reply run_model"
+      "line": "1 find_customer ask ok, 2 list_orders result ok, 3 get_order run_model, 3 get_order large ok, 4 refund_order needs_model, agent small refund_order, reply large"
     },
     {
       "day": 3,
@@ -403,7 +413,7 @@
     {
       "day": 3,
       "job": "talk-latest-status",
-      "line": "1 find_customer ask ok, 2 list_orders result ok, 3 get_order result ok, reply run_model, reply large"
+      "line": "1 find_customer ask ok, 2 list_orders result ok, 3 get_order run_model, 3 get_order large ok, reply run_model"
     },
     {
       "day": 3,
@@ -413,7 +423,7 @@
     {
       "day": 3,
       "job": "refund-and-reply",
-      "line": "1 get_order ask ok, 2 refund_order run_model, 2 refund_order result ok, 3 send_reply needs_model, agent small get_ticket, agent large send_reply, reply large"
+      "line": "1 get_order ask ok, 2 refund_order run_model, 2 refund_order result ok, 3 send_reply needs_model, agent none get_ticket, agent large send_reply, reply large"
     },
     {
       "day": 3,
@@ -423,7 +433,7 @@
     {
       "day": 3,
       "job": "address-from-ticket",
-      "line": "1 get_ticket ask ok, 2 update_address needs_model, agent small find_customer, agent large update_address, agent none close_ticket, reply large"
+      "line": "1 get_ticket ask ok, 2 update_address needs_model, agent none close_ticket, agent large update_address, reply large"
     },
     {
       "day": 3,
@@ -438,12 +448,12 @@
     {
       "day": 3,
       "job": "reply-refunded-so-far",
-      "line": "1 get_ticket ask ok, 2 get_order result ok, reply run_model, agent large send_reply, reply large"
+      "line": "1 get_ticket ask ok, 2 get_order result ok, 3 send_reply needs_model, agent large send_reply, reply large"
     },
     {
       "day": 3,
       "job": "talk-order-items",
-      "line": "1 get_order ask ok, reply run_model, reply large"
+      "line": "1 get_order ask ok, reply run_model"
     },
     {
       "day": 3,
@@ -468,7 +478,7 @@
     {
       "day": 4,
       "job": "refund-latest-by-email",
-      "line": "1 find_customer ask ok, 2 list_orders result ok, 3 get_order result ok, 4 refund_order run_model, 4 refund_order result ok, reply run_model"
+      "line": "1 find_customer ask ok, 2 list_orders result ok, 3 get_order run_model, 3 get_order large ok, 4 refund_order needs_model, agent small refund_order, reply large"
     },
     {
       "day": 4,
@@ -503,7 +513,7 @@
     {
       "day": 4,
       "job": "talk-latest-status",
-      "line": "1 find_customer ask ok, 2 list_orders result ok, 3 get_order result ok, reply run_model"
+      "line": "1 find_customer ask ok, 2 list_orders result ok, 3 get_order run_model, 3 get_order large ok, reply run_model"
     },
     {
       "day": 4,
@@ -513,17 +523,17 @@
     {
       "day": 4,
       "job": "refund-and-reply",
-      "line": "1 get_order ask ok, 2 refund_order run_model, 2 refund_order result ok, 3 send_reply needs_model, agent small get_ticket, agent large send_reply, reply large"
+      "line": "1 get_order ask ok, 2 refund_order run_model, 2 refund_order result ok, 3 send_reply needs_model, agent none get_ticket, agent large send_reply, reply large"
     },
     {
       "day": 4,
       "job": "refund-from-ticket",
-      "line": "reply needs_model, agent small get_ticket, agent small get_order, agent small refund_order, agent large close_ticket, reply large"
+      "line": "1 get_ticket ask ok, 2 get_order result ok, 3 refund_order run_model, 3 refund_order result ok, 4 close_ticket ask ok, reply run_model"
     },
     {
       "day": 4,
       "job": "address-from-ticket",
-      "line": "1 get_ticket ask ok, 2 update_address needs_model, agent large update_address, agent none close_ticket, reply large"
+      "line": "1 get_ticket ask ok, 2 update_address needs_model, agent none close_ticket, agent large update_address, reply large"
     },
     {
       "day": 4,
@@ -533,12 +543,12 @@
     {
       "day": 4,
       "job": "escalate-with-note",
-      "line": "1 add_note ask ok, 2 escalate_ticket ask ok, reply run_model"
+      "line": "1 escalate_ticket ask ok, 2 add_note ask ok, reply run_model"
     },
     {
       "day": 4,
       "job": "reply-refunded-so-far",
-      "line": "reply needs_model, agent none get_ticket, agent small get_order, agent large send_reply, reply large"
+      "line": "1 get_ticket ask ok, 2 get_order result ok, 3 send_reply needs_model, agent large send_reply, reply large"
     },
     {
       "day": 4,
@@ -556,5 +566,5 @@
       "line": "1 close_ticket ask ok, 2 close_ticket ask ok, reply run_model"
     }
   ],
-  "notes": "The playbook arm ran the library client, the harness's stand-in for the customer's playbook library, with fills that let the door call a model. The playbook arm's cost is a floor, so its saving is a ceiling: it counts what the door's answers name as spent and what its reply calls report, and a step filled with no model costs $0. On the playbook arm a failed or an empty result of a step the playbook made stops the job, so that task never passes; a call the customer's agent makes after the playbook may fail and the job goes on. Prices are list prices, with no batch or prompt-prefix discount, on both arms. The Reactor key was used by run 2026-10-16-d-before before this run: day 1 is not cold."
+  "notes": "This run asked each job in the same words every day, its day-1 phrasing, with new data each day (--words same). The playbook arm ran the library client, the harness's stand-in for the customer's playbook library, with fills that let the door call a model. The playbook arm's cost is a floor, so its saving is a ceiling: it counts what the door's answers name as spent and what its reply calls report, and a step filled with no model costs $0. On the playbook arm a failed or an empty result of a step the playbook made stops the job, so that task never passes; a call the customer's agent makes after the playbook may fail and the job goes on. Prices are list prices, with no batch or prompt-prefix discount, on both arms. Day 1 is cold only if the reactor key's account had never run this benchmark. The harness's key ledger on the machine that ran it had not seen this key at this base URL; it sees keys, not accounts, so a new key on an account that ran this benchmark before would not show there, nor would a key used through another base URL, on another machine or before the ledger existed."
 }

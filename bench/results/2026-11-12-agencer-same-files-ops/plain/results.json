@@ -5,9 +5,9 @@
   "large_model": "claude-opus-5-5",
   "small_model": null,
   "domain": "files-ops",
-  "run_id": "2026-11-10-agencer-same",
-  "harness_commit": "8ee89f335956b240a14d7ec5d4c51d48b098b456",
-  "started_at": "2026-11-10T11:18:24.565Z",
+  "run_id": "2026-11-12-agencer-same",
+  "harness_commit": "8bd05984facd8a139e7711b8c97c8ffe630e021b",
+  "started_at": "2026-11-12T14:43:14.221Z",
   "prices": {
     "claude-opus-5-5": {
       "in_per_mtok": 4,
@@ -24,14 +24,14 @@
       "small_model_tool_steps": 0,
       "wrong_tool_calls": null,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.55892,
-      "cost_per_solved_usd": 0.027946,
-      "median_task_seconds": 3.767,
+      "cost_usd": 0.559236,
+      "cost_per_solved_usd": 0.027962,
+      "median_task_seconds": 3.97,
       "step_ms": {
         "plain": {
           "steps": 45,
-          "median_ms": 1424,
-          "p90_ms": 1985
+          "median_ms": 1313,
+          "p90_ms": 1638
         }
       }
     },
@@ -39,19 +39,19 @@
       "day": 2,
       "tasks": 20,
       "passed": 20,
-      "tool_steps": 45,
+      "tool_steps": 44,
       "talk_steps": 20,
       "small_model_tool_steps": 0,
       "wrong_tool_calls": null,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.556324,
-      "cost_per_solved_usd": 0.027816,
-      "median_task_seconds": 4.386,
+      "cost_usd": 0.548576,
+      "cost_per_solved_usd": 0.027429,
+      "median_task_seconds": 4.049,
       "step_ms": {
         "plain": {
-          "steps": 45,
-          "median_ms": 1434,
-          "p90_ms": 2095
+          "steps": 44,
+          "median_ms": 1383,
+          "p90_ms": 1843
         }
       }
     },
@@ -59,19 +59,19 @@
       "day": 3,
       "tasks": 20,
       "passed": 20,
-      "tool_steps": 45,
+      "tool_steps": 46,
       "talk_steps": 20,
       "small_model_tool_steps": 0,
       "wrong_tool_calls": null,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.553608,
-      "cost_per_solved_usd": 0.02768,
-      "median_task_seconds": 5.056,
+      "cost_usd": 0.563384,
+      "cost_per_solved_usd": 0.028169,
+      "median_task_seconds": 4.221,
       "step_ms": {
         "plain": {
-          "steps": 45,
-          "median_ms": 1431,
-          "p90_ms": 2081
+          "steps": 46,
+          "median_ms": 1403,
+          "p90_ms": 2173
         }
       }
     },
@@ -79,19 +79,19 @@
       "day": 4,
       "tasks": 20,
       "passed": 20,
-      "tool_steps": 43,
+      "tool_steps": 44,
       "talk_steps": 20,
       "small_model_tool_steps": 0,
       "wrong_tool_calls": null,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.53952,
-      "cost_per_solved_usd": 0.026976,
-      "median_task_seconds": 4.403,
+      "cost_usd": 0.547372,
+      "cost_per_solved_usd": 0.027369,
+      "median_task_seconds": 4.021,
       "step_ms": {
         "plain": {
-          "steps": 43,
-          "median_ms": 1514,
-          "p90_ms": 2243
+          "steps": 44,
+          "median_ms": 1432,
+          "p90_ms": 1858
         }
       }
     }

@@ -5,9 +5,9 @@
   "large_model": "claude-opus-5-5",
   "small_model": "claude-haiku-5-5",
   "domain": "files-ops",
-  "run_id": "2026-11-10-agencer-same",
-  "harness_commit": "8ee89f335956b240a14d7ec5d4c51d48b098b456",
-  "started_at": "2026-11-10T11:26:08.295Z",
+  "run_id": "2026-11-12-agencer",
+  "harness_commit": "8bd05984facd8a139e7711b8c97c8ffe630e021b",
+  "started_at": "2026-11-12T14:09:46.522Z",
   "prices": {
     "claude-opus-5-5": {
       "in_per_mtok": 4,
@@ -22,72 +22,67 @@
     {
       "day": 1,
       "tasks": 20,
-      "passed": 20,
-      "tool_steps": 45,
-      "talk_steps": 16,
+      "passed": 19,
+      "tool_steps": 44,
+      "talk_steps": 15,
       "small_model_tool_steps": 5,
       "no_model_tool_steps": 12,
-      "wrong_tool_calls": 0,
+      "wrong_tool_calls": 1,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.466533,
-      "cost_per_solved_usd": 0.023327,
-      "median_task_seconds": 9.863,
+      "cost_usd": 0.449312,
+      "cost_per_solved_usd": 0.023648,
+      "median_task_seconds": 8.715,
       "step_ms": {
         "no_model": {
           "steps": 12,
-          "median_ms": 2601,
-          "p90_ms": 4137
+          "median_ms": 3029,
+          "p90_ms": 5591
         },
         "small": {
           "steps": 5,
-          "median_ms": 2250,
-          "p90_ms": 5769
+          "median_ms": 3701,
+          "p90_ms": 5477
         },
         "large": {
           "steps": 1,
-          "median_ms": 6758,
-          "p90_ms": 6758
+          "median_ms": 5482,
+          "p90_ms": 5482
         },
         "handed_back": {
-          "steps": 27,
-          "median_ms": 2661,
-          "p90_ms": 6570
+          "steps": 26,
+          "median_ms": 1865,
+          "p90_ms": 6536
         }
       }
     },
     {
       "day": 2,
       "tasks": 20,
-      "passed": 19,
-      "tool_steps": 44,
-      "talk_steps": 9,
-      "small_model_tool_steps": 8,
-      "no_model_tool_steps": 22,
-      "wrong_tool_calls": 1,
+      "passed": 20,
+      "tool_steps": 40,
+      "talk_steps": 13,
+      "small_model_tool_steps": 7,
+      "no_model_tool_steps": 23,
+      "wrong_tool_calls": 0,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.215377,
-      "cost_per_solved_usd": 0.011336,
-      "median_task_seconds": 6.989,
+      "cost_usd": 0.231244,
+      "cost_per_solved_usd": 0.011562,
+      "median_task_seconds": 8.542,
       "step_ms": {
         "no_model": {
-          "steps": 22,
-          "median_ms": 1098,
-          "p90_ms": 4774
+          "steps": 23,
+          "median_ms": 2468,
+          "p90_ms": 10156
         },
         "small": {
-          "steps": 8,
-          "median_ms": 2161,
-          "p90_ms": 3691
-        },
-        "large": {
-          "steps": 3,
-          "median_ms": 2350,
-          "p90_ms": 3725
+          "steps": 7,
+          "median_ms": 2360,
+          "p90_ms": 4262
         },
         "handed_back": {
-          "steps": 11,
-          "median_ms": 2719,
-          "p90_ms": 4218
+          "steps": 10,
+          "median_ms": 2672,
+          "p90_ms": 3450
         }
       }
     },
@@ -95,35 +90,30 @@
       "day": 3,
       "tasks": 20,
       "passed": 19,
-      "tool_steps": 42,
-      "talk_steps": 11,
-      "small_model_tool_steps": 10,
+      "tool_steps": 38,
+      "talk_steps": 9,
+      "small_model_tool_steps": 8,
       "no_model_tool_steps": 22,
       "wrong_tool_calls": 1,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.198066,
-      "cost_per_solved_usd": 0.010425,
-      "median_task_seconds": 6.535,
+      "cost_usd": 0.178976,
+      "cost_per_solved_usd": 0.00942,
+      "median_task_seconds": 6.178,
       "step_ms": {
         "no_model": {
           "steps": 22,
-          "median_ms": 1852,
-          "p90_ms": 4414
+          "median_ms": 2172,
+          "p90_ms": 4210
         },
         "small": {
-          "steps": 10,
-          "median_ms": 2381,
-          "p90_ms": 3010
-        },
-        "large": {
-          "steps": 2,
-          "median_ms": 2633,
-          "p90_ms": 3319
+          "steps": 8,
+          "median_ms": 2164,
+          "p90_ms": 3806
         },
         "handed_back": {
           "steps": 8,
-          "median_ms": 2437,
-          "p90_ms": 7260
+          "median_ms": 2961,
+          "p90_ms": 5694
         }
       }
     },
@@ -131,35 +121,30 @@
       "day": 4,
       "tasks": 20,
       "passed": 20,
-      "tool_steps": 45,
-      "talk_steps": 11,
-      "small_model_tool_steps": 15,
-      "no_model_tool_steps": 22,
+      "tool_steps": 40,
+      "talk_steps": 12,
+      "small_model_tool_steps": 10,
+      "no_model_tool_steps": 23,
       "wrong_tool_calls": 0,
       "failed_calls_on_passed": 0,
-      "cost_usd": 0.185261,
-      "cost_per_solved_usd": 0.009263,
-      "median_task_seconds": 6.931,
+      "cost_usd": 0.198368,
+      "cost_per_solved_usd": 0.009918,
+      "median_task_seconds": 6.737,
       "step_ms": {
         "no_model": {
-          "steps": 22,
-          "median_ms": 1357,
-          "p90_ms": 4094
+          "steps": 23,
+          "median_ms": 2450,
+          "p90_ms": 4654
         },
         "small": {
-          "steps": 15,
-          "median_ms": 2316,
-          "p90_ms": 3977
-        },
-        "large": {
-          "steps": 2,
-          "median_ms": 3438,
-          "p90_ms": 4929
+          "steps": 10,
+          "median_ms": 2048,
+          "p90_ms": 3864
         },
         "handed_back": {
-          "steps": 6,
-          "median_ms": 3253,
-          "p90_ms": 5036
+          "steps": 7,
+          "median_ms": 2447,
+          "p90_ms": 5349
         }
       }
     }
@@ -188,7 +173,7 @@
     {
       "day": 1,
       "job": "find-and-move",
-      "line": "1 search_files ask ok, 2 move_file needs_model, agent large read_file, agent large list_folder, agent large move_file, reply large"
+      "line": "1 search_files ask ok, 2 move_file needs_model, agent large list_folder, agent large move_file, reply large"
     },
     {
       "day": 1,
@@ -203,7 +188,7 @@
     {
       "day": 1,
       "job": "share-editor-by-name",
-      "line": "1 share_file needs_model, agent small search_files, agent small read_file, agent large share_file, reply large"
+      "line": "1 share_file needs_model, agent small search_files, agent large read_file, agent large share_file, reply large"
     },
     {
       "day": 1,
@@ -238,7 +223,7 @@
     {
       "day": 1,
       "job": "rename-and-tag",
-      "line": "1 rename_file ask ok, 2 tag_file needs_model, agent large tag_file, reply large"
+      "line": "1 rename_file ask ok, 2 tag_file run_model, 2 tag_file small failed, stopped: a failed result"
     },
     {
       "day": 1,
@@ -248,12 +233,12 @@
     {
       "day": 1,
       "job": "archive-done",
-      "line": "reply needs_model, agent small list_folder, agent large read_file, agent large read_file, agent large read_file, agent large read_file, agent large list_folder, agent small move_file, agent large move_file, reply large"
+      "line": "reply needs_model, agent small list_folder, agent large read_file, agent large read_file, agent large read_file, agent large read_file, agent large list_folder, agent large move_file, agent large move_file, reply large"
     },
     {
       "day": 1,
       "job": "set-two-fields",
-      "line": "1 set_field needs_model, agent large read_file, agent small set_field, agent large set_field, reply large"
+      "line": "1 set_field needs_model, agent small read_file, agent small set_field, agent large set_field, reply large"
     },
     {
       "day": 1,
@@ -283,17 +268,17 @@
     {
       "day": 2,
       "job": "find-and-tag",
-      "line": "1 search_files ask ok, 2 tag_file needs_model, agent small read_file, agent large tag_file, reply large"
+      "line": "1 search_files ask ok, 2 tag_file run_model, agent none tag_file, reply large"
     },
     {
       "day": 2,
       "job": "find-and-move",
-      "line": "1 search_files ask ok, 2 read_file run_model, 2 read_file large ok, 3 list_folder run_model, 3 list_folder large ok, 4 move_file result ok, reply run_model"
+      "line": "1 search_files ask ok, 2 move_file run_model, agent none move_file, reply large"
     },
     {
       "day": 2,
       "job": "new-folder-move",
-      "line": "1 list_folder run_model, 1 list_folder large ok, 2 create_folder ask ok, 3 move_file ask ok, reply run_model"
+      "line": "1 create_folder ask ok, 2 move_file ask ok, reply run_model"
     },
     {
       "day": 2,
@@ -303,12 +288,12 @@
     {
       "day": 2,
       "job": "share-editor-by-name",
-      "line": "1 search_files ask empty, stopped: an empty result"
+      "line": "1 read_file ask ok, 2 share_file needs_model, agent large share_file, reply large"
     },
     {
       "day": 2,
       "job": "owner-from-text",
-      "line": "reply needs_model, agent none read_file, agent small set_field, reply large"
+      "line": "1 read_file ask ok, 2 set_field needs_model, agent small set_field, reply large"
     },
     {
       "day": 2,
@@ -338,7 +323,7 @@
     {
       "day": 2,
       "job": "rename-and-tag",
-      "line": "1 tag_file ask ok, 2 rename_file ask ok, reply run_model"
+      "line": "1 rename_file ask ok, 2 tag_file needs_model, agent large tag_file, reply large"
     },
     {
       "day": 2,
@@ -348,7 +333,7 @@
     {
       "day": 2,
       "job": "archive-done",
-      "line": "reply needs_model, agent none list_folder, agent large read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, agent large move_file, reply large"
+      "line": "reply needs_model, agent small list_folder, agent large read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, agent large move_file, reply large"
     },
     {
       "day": 2,
@@ -358,12 +343,12 @@
     {
       "day": 2,
       "job": "share-two",
-      "line": "1 share_file needs_model, agent small read_file, agent large share_file, agent large share_file, reply large"
+      "line": "1 share_file needs_model, agent none share_file, agent none share_file, reply large"
     },
     {
       "day": 2,
       "job": "talk-shared-with",
-      "line": "1 read_file ask ok, reply run_model"
+      "line": "1 read_file ask ok, reply run_model, reply large"
     },
     {
       "day": 3,
@@ -383,22 +368,22 @@
     {
       "day": 3,
       "job": "find-and-tag",
-      "line": "1 search_files ask ok, 2 tag_file needs_model, agent large tag_file, reply large"
+      "line": "1 search_files ask ok, 2 tag_file run_model, 2 tag_file result ok, reply run_model"
     },
     {
       "day": 3,
       "job": "find-and-move",
-      "line": "1 search_files ask ok, 2 read_file run_model, 2 read_file large ok, 3 list_folder ask ok, 4 move_file result ok, reply run_model"
+      "line": "1 search_files ask ok, 2 move_file run_model, 2 move_file result ok, reply run_model"
     },
     {
       "day": 3,
       "job": "new-folder-move",
-      "line": "1 list_folder run_model, 1 list_folder large ok, 2 create_folder ask ok, 3 move_file ask ok, reply run_model"
+      "line": "1 create_folder ask ok, 2 move_file ask ok, reply run_model"
     },
     {
       "day": 3,
       "job": "share-viewer",
-      "line": "1 share_file needs_model, agent none read_file, agent large share_file, reply large"
+      "line": "1 share_file needs_model, agent large share_file, reply large"
     },
     {
       "day": 3,
@@ -433,37 +418,37 @@
     {
       "day": 3,
       "job": "tag-folder",
-      "line": "1 list_folder ask ok, 2 tag_file needs_model, agent small tag_file, agent small tag_file, agent large tag_file, reply large"
+      "line": "1 list_folder ask ok, reply run_model, agent small tag_file, agent small tag_file, agent large tag_file, reply large"
     },
     {
       "day": 3,
       "job": "rename-and-tag",
-      "line": "1 rename_file ask ok, 2 tag_file needs_model, agent large tag_file, reply large"
+      "line": "1 tag_file ask ok, 2 rename_file ask ok, reply run_model"
     },
     {
       "day": 3,
       "job": "move-and-share",
-      "line": "1 move_file ask ok, 2 share_file needs_model, agent small share_file, reply large"
+      "line": "1 move_file ask ok, 2 share_file needs_model, agent large share_file, reply large"
     },
     {
       "day": 3,
       "job": "archive-done",
-      "line": "reply needs_model, agent none list_folder, agent small read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, reply large"
+      "line": "reply needs_model, agent small list_folder, agent small read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, reply large"
     },
     {
       "day": 3,
       "job": "set-two-fields",
-      "line": "1 set_field ask ok, 2 set_field needs_model, agent large set_field, reply large"
+      "line": "1 set_field ask ok, 2 set_field ask ok, reply run_model"
     },
     {
       "day": 3,
       "job": "share-two",
-      "line": "1 share_file needs_model, agent small read_file, agent large share_file, agent small share_file, reply large"
+      "line": "1 share_file needs_model, agent large read_file, agent large share_file, agent large share_file, reply large"
     },
     {
       "day": 3,
       "job": "talk-shared-with",
-      "line": "1 read_file ask ok, reply run_model"
+      "line": "1 read_file ask ok, reply run_model, reply large"
     },
     {
       "day": 4,
@@ -483,27 +468,27 @@
     {
       "day": 4,
       "job": "find-and-tag",
-      "line": "1 search_files ask ok, 2 tag_file needs_model, agent large tag_file, reply large"
+      "line": "1 search_files ask ok, 2 tag_file run_model, 2 tag_file result ok, reply run_model"
     },
     {
       "day": 4,
       "job": "find-and-move",
-      "line": "1 search_files ask ok, 2 read_file run_model, 2 read_file large ok, 3 list_folder ask ok, 4 move_file result ok, reply run_model"
+      "line": "1 search_files ask ok, 2 move_file run_model, agent none move_file, agent large read_file, reply large"
     },
     {
       "day": 4,
       "job": "new-folder-move",
-      "line": "1 list_folder run_model, 1 list_folder large ok, 2 create_folder ask ok, 3 move_file ask ok, reply run_model"
+      "line": "1 create_folder ask ok, 2 move_file ask ok, reply run_model"
     },
     {
       "day": 4,
       "job": "share-viewer",
-      "line": "1 share_file needs_model, agent none read_file, agent large share_file, reply large"
+      "line": "1 share_file needs_model, agent none share_file, reply large"
     },
     {
       "day": 4,
       "job": "share-editor-by-name",
-      "line": "1 share_file needs_model, agent small search_files, agent small read_file, agent large share_file, reply large"
+      "line": "1 read_file ask ok, 2 share_file needs_model, agent large share_file, reply large"
     },
     {
       "day": 4,
@@ -538,17 +523,17 @@
     {
       "day": 4,
       "job": "rename-and-tag",
-      "line": "1 rename_file ask ok, 2 tag_file needs_model, agent small tag_file, reply large"
+      "line": "1 rename_file ask ok, 2 tag_file needs_model, agent large tag_file, reply large"
     },
     {
       "day": 4,
       "job": "move-and-share",
-      "line": "1 move_file ask ok, 2 share_file needs_model, agent small share_file, reply large"
+      "line": "1 share_file needs_model, agent none share_file, agent none move_file, reply large"
     },
     {
       "day": 4,
       "job": "archive-done",
-      "line": "reply needs_model, agent none list_folder, agent small read_file, agent small read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, reply large"
+      "line": "reply needs_model, agent small list_folder, agent small read_file, agent small read_file, agent small read_file, agent small read_file, agent large list_folder, agent small move_file, reply large"
     },
     {
       "day": 4,
@@ -558,13 +543,13 @@
     {
       "day": 4,
       "job": "share-two",
-      "line": "1 share_file needs_model, agent small read_file, agent large share_file, agent small share_file, reply large"
+      "line": "1 share_file needs_model, agent large share_file, agent large share_file, reply large"
     },
     {
       "day": 4,
       "job": "talk-shared-with",
-      "line": "1 read_file ask ok, reply run_model"
+      "line": "1 read_file ask ok, reply run_model, reply large"
     }
   ],
-  "notes": "This run asked each job in the same words every day, its day-1 phrasing, with new data each day (--words same). The playbook arm ran the library client, the harness's stand-in for the customer's playbook library, with fills that let the door call a model. The playbook arm's cost is a floor, so its saving is a ceiling: it counts what the door's answers name as spent and what its reply calls report, and a step filled with no model costs $0. On the playbook arm a failed or an empty result of a step the playbook made stops the job, so that task never passes; a call the customer's agent makes after the playbook may fail and the job goes on. Prices are list prices, with no batch or prompt-prefix discount, on both arms. The Reactor key was used by run 2026-10-16-d-before before this run: day 1 is not cold."
+  "notes": "The playbook arm ran the library client, the harness's stand-in for the customer's playbook library, with fills that let the door call a model. The playbook arm's cost is a floor, so its saving is a ceiling: it counts what the door's answers name as spent and what its reply calls report, and a step filled with no model costs $0. On the playbook arm a failed or an empty result of a step the playbook made stops the job, so that task never passes; a call the customer's agent makes after the playbook may fail and the job goes on. Prices are list prices, with no batch or prompt-prefix discount, on both arms. Day 1 is cold only if the reactor key's account had never run this benchmark. The harness's key ledger on the machine that ran it had not seen this key at this base URL; it sees keys, not accounts, so a new key on an account that ran this benchmark before would not show there, nor would a key used through another base URL, on another machine or before the ledger existed."
 }
